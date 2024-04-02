@@ -20,6 +20,7 @@ const userSchema = new mongoose.Schema(
       min: 5,
     },
     city: String,
+    occupation: String,
     state: String,
     country: String,
     phoneNumber: String,
