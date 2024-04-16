@@ -8,6 +8,7 @@ import { geoData } from "state/geoData";
 const Geography = () => {
   const theme = useTheme();
   const { data } = useGetGeographyQuery();
+
   return (
     <Box m="1.5rem 2.5rem">
       <Header title="GEOGRAPHY" subtitle="Find where your users are located." />
@@ -55,16 +56,13 @@ const Geography = () => {
             }}
             features={geoData.features}
             margin={{ top: 0, right: 0, bottom: 0, left: -50 }}
-            colors="nivo"
-            domain={[0, 1000000]}
+            domain={[0, 60]}
             unknownColor="#666666"
             label="properties.name"
             valueFormat=".2s"
             projectionScale={150}
             projectionTranslation={[0.45, 0.6]}
             projectionRotation={[0, 0, 0]}
-            enableGraticule={true}
-            graticuleLineColor="#dddddd"
             borderWidth={1.3}
             borderColor="#ffffff"
             legends={[
